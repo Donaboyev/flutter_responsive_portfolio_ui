@@ -1,9 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../constants.dart';
 import '../../components/custom_text_button.dart';
 import '../../core/theme.dart';
+import 'w_recent_post_item_desktop.dart';
 
 class WHomeDesktop extends StatelessWidget {
   const WHomeDesktop({Key? key}) : super(key: key);
@@ -111,11 +113,11 @@ class WHomeDesktop extends StatelessWidget {
         ),
         SizedBox(
           height: 396,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 148),
-            child: Column(
-              children: [
-                Row(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 32, left: 148,right: 148),
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
@@ -131,8 +133,49 @@ class WHomeDesktop extends StatelessWidget {
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+              const SizedBox(height: 22),
+              SizedBox(
+                height: 278,
+                child: ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context).copyWith(
+                    dragDevices: {
+                      PointerDeviceKind.touch,
+                      PointerDeviceKind.mouse,
+                      PointerDeviceKind.stylus,
+                      PointerDeviceKind.unknown,
+                    },
+                  ),
+                  child: ListView(
+                    physics: const BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    children: const [
+                      SizedBox(width: 148),
+                      WRecentPostItemDesktop(
+                        title: textPostTitle1,
+                        topic: textPostTopic1,
+                      ),
+                      SizedBox(width: 20),
+                      WRecentPostItemDesktop(
+                        title: textPostTitle2,
+                        topic: textPostTopic1,
+                      ),
+                      SizedBox(width: 20),
+                      WRecentPostItemDesktop(
+                        title: textPostTitle1,
+                        topic: textPostTopic1,
+                      ),
+                      SizedBox(width: 20),
+                      WRecentPostItemDesktop(
+                        title: textPostTitle2,
+                        topic: textPostTopic1,
+                      ),
+                      SizedBox(width: 148),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         )
       ],
