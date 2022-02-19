@@ -44,6 +44,14 @@ class AppStyles {
     ),
   );
 
+  static TextStyle styRecentItemTitleMobile = GoogleFonts.heebo(
+    textStyle: const TextStyle(
+      fontSize: 22,
+      fontWeight: FontWeight.w700,
+      color: clrDarkBlack,
+    ),
+  );
+
   static TextStyle styBlueTextButton = GoogleFonts.heebo(
     textStyle: const TextStyle(
       fontSize: 16,

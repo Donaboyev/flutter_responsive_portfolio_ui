@@ -127,7 +127,7 @@ class WHomeDesktop extends StatelessWidget {
                     TextButton(
                       onPressed: () {},
                       child: Text(
-                        'View all',
+                        textViewAll,
                         style: AppStyles.styBlueTextButton,
                       ),
                     ),

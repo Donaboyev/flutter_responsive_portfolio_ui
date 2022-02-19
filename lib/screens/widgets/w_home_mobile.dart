@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../constants.dart';
 import '../../core/theme.dart';
+import 'w_recent_post_item_mobile.dart';
 
 class WHomeMobile extends StatelessWidget {
   const WHomeMobile({Key? key}) : super(key: key);
@@ -71,6 +72,38 @@ class WHomeMobile extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(
+          height: 679,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 21, horizontal: 10),
+            child: Column(
+              children: [
+                Text(
+                  textRecentPosts,
+                  style: AppStyles.styRecentItemDate,
+                ),
+                const SizedBox(height: 17),
+                const WRecentPostItemMobile(
+                  title: textPostTitle1,
+                  topic: textPostTopic1,
+                ),
+                const SizedBox(height: 17),
+                const WRecentPostItemMobile(
+                  title: textPostTitle2,
+                  topic: textPostTopic2,
+                ),
+                const SizedBox(height: 17),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    textViewAll,
+                    style: AppStyles.styBlueTextButton,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        )
       ],
     );
   }
