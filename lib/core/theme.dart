@@ -75,4 +75,28 @@ class AppStyles {
       color: clrDarkBlack,
     ),
   );
+
+  static TextStyle styFeaturedTitle = GoogleFonts.heebo(
+    textStyle: const TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.w700,
+      color: clrDarkBlack,
+    ),
+  );
+
+  static TextStyle styFeaturedYear = GoogleFonts.heebo(
+    textStyle: const TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w900,
+      color: clrWhite,
+    ),
+  );
+
+  static TextStyle styFeaturedTopic = GoogleFonts.heebo(
+    textStyle: const TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w400,
+      color: clrFeaturedTopic,
+    ),
+  );
 }

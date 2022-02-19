@@ -6,6 +6,7 @@ import '../../constants.dart';
 import '../../components/custom_text_button.dart';
 import '../../core/theme.dart';
 import 'w_recent_post_item_desktop.dart';
+import 'w_featured_item_desktop.dart';
 
 class WHomeDesktop extends StatelessWidget {
   const WHomeDesktop({Key? key}) : super(key: key);
@@ -116,7 +117,7 @@ class WHomeDesktop extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 32, left: 148,right: 148),
+                padding: const EdgeInsets.only(top: 32, left: 148, right: 148),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -177,7 +178,39 @@ class WHomeDesktop extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
+        Container(
+          color: clrWhite,
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 148, vertical: 15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                textFeaturedWorks,
+                style: AppStyles.styRecentPosts,
+              ),
+              const SizedBox(height: 22),
+              const WFeaturedItemDesktop(
+                img: assetsFeatured1,
+                title: textFeaturedTitle1,
+                topic: textFeaturedTopic1,
+              ),
+              const SizedBox(height: 31),
+              const WFeaturedItemDesktop(
+                img: assetsFeatured2,
+                title: textFeaturedTitle2,
+                topic: textFeaturedTopic2,
+              ),
+              const SizedBox(height: 31),
+              const WFeaturedItemDesktop(
+                img: assetsFeatured3,
+                title: textFeaturedTitle3,
+                topic: textFeaturedTopic3,
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
