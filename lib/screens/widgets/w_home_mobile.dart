@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 import '../../constants.dart';
 import '../../core/theme.dart';
 import 'w_recent_post_item_mobile.dart';
+import 'w_featured_item_mobile.dart';
 
 class WHomeMobile extends StatelessWidget {
   const WHomeMobile({Key? key}) : super(key: key);
@@ -103,7 +105,51 @@ class WHomeMobile extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),
+        Container(
+          color: clrWhite,
+          height: 60,
+          child: Center(
+            child: Text(
+              textFeaturedWorks,
+              style: AppStyles.styRecentItemDate,
+            ),
+          ),
+        ),
+        Container(
+          color: clrWhite,
+          height: 476,
+          width: double.infinity,
+          child: CarouselSlider(
+            options: CarouselOptions(
+              disableCenter: true,
+              enableInfiniteScroll: true,
+              autoPlay: true,
+              autoPlayInterval: const Duration(seconds: 5),
+              autoPlayAnimationDuration: const Duration(milliseconds: 1500),
+              pauseAutoPlayOnTouch: true,
+              viewportFraction: 0.8,
+              enlargeCenterPage: true,
+            ),
+            items: const [
+              WFeaturedItemMobile(
+                img: assetsFeatured1,
+                title: textFeaturedTitle1,
+                topic: textFeaturedTopic1,
+              ),
+              WFeaturedItemMobile(
+                img: assetsFeatured2,
+                title: textFeaturedTitle2,
+                topic: textFeaturedTopic2,
+              ),
+              WFeaturedItemMobile(
+                img: assetsFeatured3,
+                title: textFeaturedTitle3,
+                topic: textFeaturedTopic3,
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
