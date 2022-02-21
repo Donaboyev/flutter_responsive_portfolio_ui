@@ -42,6 +42,7 @@ const String textFeaturedYear1 = '2020';
 const String textFeaturedTopic1 = 'Dashboard';
 const String textFeaturedTopic2 = 'Illustration';
 const String textFeaturedTopic3 = 'Typography';
+const String textCopyright = 'Copyright ©2022 All rights reserved ';
 
 /// App assets
 const String assetsManImage = 'assets/images/png/man_image.png';
@@ -49,3 +50,7 @@ const String assetsIconMenu = 'assets/images/svg/ic_menu.svg';
 const String assetsFeatured1 = 'assets/images/png/featured_1.png';
 const String assetsFeatured2 = 'assets/images/png/featured_2.png';
 const String assetsFeatured3 = 'assets/images/png/featured_3.png';
+const String assetsFb = 'assets/images/svg/ic_fb.svg';
+const String assetsInsta = 'assets/images/svg/ic_insta.svg';
+const String assetsTwitter = 'assets/images/svg/ic_twitter.svg';
+const String assetsLinkedin = 'assets/images/svg/ic_linkedin.svg';

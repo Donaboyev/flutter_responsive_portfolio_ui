@@ -18,7 +18,6 @@ class WFeaturedItemMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return SizedBox(
       width: 339,
       child: Column(

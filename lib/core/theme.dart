@@ -123,4 +123,12 @@ class AppStyles {
       color: clrDarkBlack,
     ),
   );
+
+  static TextStyle styCopyright = GoogleFonts.heebo(
+    textStyle: const TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w400,
+      color: clrDarkBlack,
+    ),
+  );
 }

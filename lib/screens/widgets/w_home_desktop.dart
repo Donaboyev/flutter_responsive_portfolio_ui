@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../constants.dart';
@@ -121,10 +122,7 @@ class WHomeDesktop extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      textRecentPosts,
-                      style: AppStyles.styRecentPosts,
-                    ),
+                    Text(textRecentPosts, style: AppStyles.styRecentPosts),
                     TextButton(
                       onPressed: () {},
                       child: Text(
@@ -208,9 +206,35 @@ class WHomeDesktop extends StatelessWidget {
                 title: textFeaturedTitle3,
                 topic: textFeaturedTopic3,
               ),
+              const SizedBox(height: 83),
             ],
           ),
         ),
+        Container(
+          color: clrWhite,
+          height: 182,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(assetsFb),
+                    const SizedBox(width: 35),
+                    SvgPicture.asset(assetsInsta),
+                    const SizedBox(width: 35),
+                    SvgPicture.asset(assetsTwitter),
+                    const SizedBox(width: 35),
+                    SvgPicture.asset(assetsLinkedin),
+                  ],
+                ),
+                const SizedBox(height: 26),
+                Text(textCopyright, style: AppStyles.styCopyright),
+              ],
+            ),
+          ),
+        )
       ],
     );
   }
