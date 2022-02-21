@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -118,7 +119,7 @@ class WHomeMobile extends StatelessWidget {
         ),
         Container(
           color: clrWhite,
-          height: 476,
+          height: 476+150,
           width: double.infinity,
           child: CarouselSlider(
             options: CarouselOptions(
@@ -147,6 +148,30 @@ class WHomeMobile extends StatelessWidget {
                 title: textFeaturedTitle3,
                 topic: textFeaturedTopic3,
               ),
+            ],
+          ),
+        ),
+        Container(
+          color: clrWhite,
+          height: 182,
+          // margin: const EdgeInsets.only(top: 150),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(assetsFb),
+                  const SizedBox(width: 35),
+                  SvgPicture.asset(assetsInsta),
+                  const SizedBox(width: 35),
+                  SvgPicture.asset(assetsTwitter),
+                  const SizedBox(width: 35),
+                  SvgPicture.asset(assetsLinkedin),
+                ],
+              ),
+              const SizedBox(height: 26),
+              Text(textCopyright, style: AppStyles.styCopyright),
             ],
           ),
         ),
