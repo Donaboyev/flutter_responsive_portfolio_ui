@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../constants.dart';
 import '../../components/custom_text_button.dart';
-import '../../core/theme.dart';
+import '../../core/core.dart';
 import 'w_recent_post_item_desktop.dart';
 import 'w_featured_item_desktop.dart';
 
@@ -23,17 +23,17 @@ class WHomeDesktop extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 CustomTextButton(
-                  text: textWork,
+                  text: Strings.works,
                   onPressed: () {},
                 ),
                 const SizedBox(width: 33),
                 CustomTextButton(
-                  text: textBlog,
+                  text: Strings.blog,
                   onPressed: () {},
                 ),
                 const SizedBox(width: 33),
                 CustomTextButton(
-                  text: textContact,
+                  text: Strings.contact,
                   onPressed: () {},
                 ),
                 const SizedBox(width: 60),
@@ -55,13 +55,13 @@ class WHomeDesktop extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              textWhoAmI,
+                              Strings.whoAmI,
                               maxLines: 2,
                               style: AppStyles.styWhoAmIDesktop,
                             ),
                             const SizedBox(height: 40),
                             Text(
-                              textAboutMe,
+                              Strings.aboutMe,
                               maxLines: 4,
                               style: AppStyles.styAboutMe,
                             ),
@@ -90,7 +90,7 @@ class WHomeDesktop extends StatelessWidget {
                     ),
                     onPressed: () {},
                     child: Text(
-                      textDownloadResume,
+                      Strings.downloadResume,
                       style: AppStyles.styWhite20W500,
                     ),
                   ),
@@ -110,11 +110,11 @@ class WHomeDesktop extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(textRecentPosts, style: AppStyles.styRecentPosts),
+                    Text(Strings.recentPosts, style: AppStyles.styRecentPosts),
                     TextButton(
                       onPressed: () {},
                       child: Text(
-                        textViewAll,
+                        Strings.viewAll,
                         style: AppStyles.styBlueTextButton,
                       ),
                     ),
@@ -139,23 +139,23 @@ class WHomeDesktop extends StatelessWidget {
                     children: const [
                       SizedBox(width: 148),
                       WRecentPostItemDesktop(
-                        title: textPostTitle1,
-                        topic: textPostTopic1,
+                        title: Strings.postTitle1,
+                        topic: Strings.postTopic1,
                       ),
                       SizedBox(width: 20),
                       WRecentPostItemDesktop(
-                        title: textPostTitle2,
-                        topic: textPostTopic1,
+                        title: Strings.postTitle2,
+                        topic: Strings.postTopic2,
                       ),
                       SizedBox(width: 20),
                       WRecentPostItemDesktop(
-                        title: textPostTitle1,
-                        topic: textPostTopic1,
+                        title: Strings.postTitle1,
+                        topic: Strings.postTopic1,
                       ),
                       SizedBox(width: 20),
                       WRecentPostItemDesktop(
-                        title: textPostTitle2,
-                        topic: textPostTopic1,
+                        title: Strings.postTitle2,
+                        topic: Strings.postTopic2,
                       ),
                       SizedBox(width: 148),
                     ],
@@ -173,26 +173,26 @@ class WHomeDesktop extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                textFeaturedWorks,
+                Strings.featuredWorks,
                 style: AppStyles.styRecentPosts,
               ),
               const SizedBox(height: 22),
               const WFeaturedItemDesktop(
                 img: assetsFeatured1,
-                title: textFeaturedTitle1,
-                topic: textFeaturedTopic1,
+                title: Strings.featuredTitle1,
+                topic: Strings.featuredTopic1,
               ),
               const SizedBox(height: 31),
               const WFeaturedItemDesktop(
                 img: assetsFeatured2,
-                title: textFeaturedTitle2,
-                topic: textFeaturedTopic2,
+                title: Strings.featuredTitle2,
+                topic: Strings.featuredTopic2,
               ),
               const SizedBox(height: 31),
               const WFeaturedItemDesktop(
                 img: assetsFeatured3,
-                title: textFeaturedTitle3,
-                topic: textFeaturedTopic3,
+                title: Strings.featuredTitle3,
+                topic: Strings.featuredTopic3,
               ),
               const SizedBox(height: 83),
             ],
@@ -218,7 +218,7 @@ class WHomeDesktop extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 26),
-                Text(textCopyright, style: AppStyles.styCopyright),
+                Text(Strings.copyright, style: AppStyles.styCopyright),
               ],
             ),
           ),

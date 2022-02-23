@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'screens/home_screen.dart';
 import 'constants.dart';
+import 'core/strings.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Responsive Portfolio UI',
+      title: Strings.appTitle,
       theme: ThemeData.light().copyWith(
         primaryColor: primaryColor,
         scaffoldBackgroundColor: bgColor,

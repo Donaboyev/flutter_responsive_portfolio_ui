@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
-import '../../core/theme.dart';
+import '../../core/core.dart';
 import '../../constants.dart';
 
 class WFeaturedItemMobile extends StatelessWidget {
@@ -54,7 +53,7 @@ class WFeaturedItemMobile extends StatelessWidget {
                     color: clrFeaturedYear,
                   ),
                   child: Text(
-                    textFeaturedYear1,
+                    Strings.featuredYear1,
                     style: AppStyles.styFeaturedYearMobile,
                     textAlign: TextAlign.center,
                   ),
@@ -71,7 +70,7 @@ class WFeaturedItemMobile extends StatelessWidget {
           SizedBox(
             width: 339,
             child: Text(
-              textPostDescription,
+              Strings.postDescription,
               style: AppStyles.styAboutMe,
               maxLines: 4,
             ),

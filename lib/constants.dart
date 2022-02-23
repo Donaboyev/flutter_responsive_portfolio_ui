@@ -22,7 +22,7 @@ const maxWidth = 1440.0; // max width of our web
 const textWhoAmI = 'Hi, I am John,\nCreative Technologist';
 const textAboutMe =
     'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.';
-const String textWork = 'Work';
+const String textWorks = 'Works';
 const String textBlog = 'Blog';
 const String textContact = 'Contact';
 const String textDownloadResume = 'Download resume';

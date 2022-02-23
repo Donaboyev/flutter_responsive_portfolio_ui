@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/theme.dart';
+import '../../core/core.dart';
 import '../../constants.dart';
 
 class WFeaturedItemDesktop extends StatelessWidget {
@@ -53,7 +53,7 @@ class WFeaturedItemDesktop extends StatelessWidget {
                             color: clrFeaturedYear,
                           ),
                           child: Text(
-                            textFeaturedYear1,
+                            Strings.featuredYear1,
                             style: AppStyles.styFeaturedYear,
                             textAlign: TextAlign.center,
                           ),
@@ -66,7 +66,7 @@ class WFeaturedItemDesktop extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      textPostDescription,
+                      Strings.postDescription,
                       style: AppStyles.styAboutMe,
                       maxLines: 3,
                     ),

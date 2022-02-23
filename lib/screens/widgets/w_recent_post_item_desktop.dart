@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
-import '../../core/theme.dart';
+import '../../core/core.dart';
 
 class WRecentPostItemDesktop extends StatelessWidget {
   final String title;
@@ -34,7 +34,7 @@ class WRecentPostItemDesktop extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  textDate,
+                  Strings.date,
                   style: AppStyles.styRecentItemDate,
                 ),
                 const SizedBox(width: 26),
@@ -52,7 +52,7 @@ class WRecentPostItemDesktop extends StatelessWidget {
             ),
             const SizedBox(height: 11),
             Text(
-              textPostDescription,
+              Strings.postDescription,
               style: AppStyles.styAboutMe,
             ),
           ],

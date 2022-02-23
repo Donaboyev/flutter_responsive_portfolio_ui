@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import '../../constants.dart';
-import '../../core/theme.dart';
+import '../../core/core.dart';
 import 'w_recent_post_item_mobile.dart';
 import 'w_featured_item_mobile.dart';
 
@@ -32,7 +32,7 @@ class WHomeMobile extends StatelessWidget {
               ),
               const SizedBox(height: 34),
               Text(
-                textWhoAmI,
+                Strings.whoAmI,
                 textAlign: TextAlign.center,
                 style: AppStyles.styWhoAmIMobile,
               ),
@@ -42,7 +42,7 @@ class WHomeMobile extends StatelessWidget {
                   maxWidth: 1024 - 2 * 200,
                 ),
                 child: Text(
-                  textAboutMe,
+                  Strings. aboutMe,
                   maxLines: 4,
                   textAlign: TextAlign.center,
                   style: AppStyles.styAboutMe,
@@ -62,7 +62,7 @@ class WHomeMobile extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: Text(
-                  textDownloadResume,
+                  Strings.downloadResume,
                   style: GoogleFonts.heebo(
                     textStyle: const TextStyle(
                       fontSize: 20,
@@ -82,24 +82,24 @@ class WHomeMobile extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  textRecentPosts,
+                  Strings.recentPosts,
                   style: AppStyles.styRecentItemDate,
                 ),
                 const SizedBox(height: 17),
                 const WRecentPostItemMobile(
-                  title: textPostTitle1,
-                  topic: textPostTopic1,
+                  title: Strings.postTitle1,
+                  topic:Strings. postTopic1,
                 ),
                 const SizedBox(height: 17),
                 const WRecentPostItemMobile(
-                  title: textPostTitle2,
-                  topic: textPostTopic2,
+                  title: Strings.postTitle2,
+                  topic: Strings.postTopic2,
                 ),
                 const SizedBox(height: 17),
                 TextButton(
                   onPressed: () {},
                   child: Text(
-                    textViewAll,
+                    Strings.viewAll,
                     style: AppStyles.styBlueTextButton,
                   ),
                 ),
@@ -112,7 +112,7 @@ class WHomeMobile extends StatelessWidget {
           height: 60,
           child: Center(
             child: Text(
-              textFeaturedWorks,
+              Strings.featuredWorks,
               style: AppStyles.styRecentItemDate,
             ),
           ),
@@ -135,18 +135,18 @@ class WHomeMobile extends StatelessWidget {
             items: const [
               WFeaturedItemMobile(
                 img: assetsFeatured1,
-                title: textFeaturedTitle1,
-                topic: textFeaturedTopic1,
+                title: Strings.featuredTitle1,
+                topic: Strings.featuredTopic1,
               ),
               WFeaturedItemMobile(
                 img: assetsFeatured2,
-                title: textFeaturedTitle2,
-                topic: textFeaturedTopic2,
+                title: Strings.featuredTitle2,
+                topic: Strings.featuredTopic2,
               ),
               WFeaturedItemMobile(
                 img: assetsFeatured3,
-                title: textFeaturedTitle3,
-                topic: textFeaturedTopic3,
+                title: Strings.featuredTitle3,
+                topic: Strings.featuredTopic3,
               ),
             ],
           ),
@@ -171,7 +171,7 @@ class WHomeMobile extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 26),
-              Text(textCopyright, style: AppStyles.styCopyright),
+              Text(Strings.copyright, style: AppStyles.styCopyright),
             ],
           ),
         ),
