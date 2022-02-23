@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:responsive_portfolio_ui/core/theme.dart';
-import '../responsive.dart';
-import '../components/custom_text_button.dart';
+
 import '../constants.dart';
+import '../responsive.dart';
 import 'widgets/w_home_desktop.dart';
 import 'widgets/w_home_mobile.dart';
+import '../components/bouncing/bouncing_physics.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: Responsive.isDesktop(context)
           ? null
           : AppBar(
@@ -35,10 +34,22 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-      body: SingleChildScrollView(
-        child: Responsive.isDesktop(context)
-            ? const WHomeDesktop()
-            : const WHomeMobile(),
+      body: Center(
+        child: Container(
+          color: clrWhite,
+          constraints: const BoxConstraints(maxWidth: 1152),
+          child: ScrollConfiguration(
+            behavior: ScrollConfiguration.of(context).copyWith(
+              scrollbars: false,
+            ),
+            child: SingleChildScrollView(
+              physics: const CustomBouncingScrollPhysics(),
+              child: Responsive.isDesktop(context)
+                  ? const WHomeDesktop()
+                  : const WHomeMobile(),
+            ),
+          ),
+        ),
       ),
     );
   }

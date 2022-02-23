@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../constants.dart';
 import '../../components/custom_text_button.dart';
@@ -14,106 +13,95 @@ class WHomeDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return Column(
       children: [
-        Container(
-          height: 595,
-          decoration: const BoxDecoration(
-            color: clrWhite,
-          ),
-          child: Column(
-            children: [
-              const SizedBox(height: 27),
-              Align(
-                alignment: Alignment.centerRight,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    CustomTextButton(
-                      text: textWork,
-                      onPressed: () {},
-                    ),
-                    const SizedBox(width: 33),
-                    CustomTextButton(
-                      text: textBlog,
-                      onPressed: () {},
-                    ),
-                    const SizedBox(width: 33),
-                    CustomTextButton(
-                      text: textContact,
-                      onPressed: () {},
-                    ),
-                    const SizedBox(width: 60),
-                  ],
+        Column(
+          children: [
+            const SizedBox(height: 27),
+            /// text buttons ['Work', 'Blog', 'Contact']
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CustomTextButton(
+                  text: textWork,
+                  onPressed: () {},
                 ),
-              ),
-              const SizedBox(height: 140),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 148),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          width: size.width - 2 * 148 - 343,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                textWhoAmI,
-                                maxLines: 2,
-                                style: AppStyles.styWhoAmIDesktop,
-                              ),
-                              const SizedBox(height: 40),
-                              Text(
-                                textAboutMe,
-                                maxLines: 3,
-                                style: AppStyles.styAboutMe,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Image.asset(
-                          assetsManImage,
-                          width: 243,
-                          height: 243,
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 38),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: secondaryColor,
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 17,
-                          horizontal: 20,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(2),
+                const SizedBox(width: 33),
+                CustomTextButton(
+                  text: textBlog,
+                  onPressed: () {},
+                ),
+                const SizedBox(width: 33),
+                CustomTextButton(
+                  text: textContact,
+                  onPressed: () {},
+                ),
+                const SizedBox(width: 60),
+              ],
+            ),
+            const SizedBox(height: 140),
+            /// man info section ['Who am I', 'Description', 'Image', 'Download']
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 148),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        constraints:const BoxConstraints(maxWidth: 484),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              textWhoAmI,
+                              maxLines: 2,
+                              style: AppStyles.styWhoAmIDesktop,
+                            ),
+                            const SizedBox(height: 40),
+                            Text(
+                              textAboutMe,
+                              maxLines: 4,
+                              style: AppStyles.styAboutMe,
+                            ),
+                          ],
                         ),
                       ),
-                      onPressed: () {},
-                      child: Text(
-                        textDownloadResume,
-                        style: GoogleFonts.heebo(
-                          textStyle: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
-                          ),
-                        ),
+                      Image.asset(
+                        assetsManImage,
+                        width: 243,
+                        height: 243,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 38),
+                  /// download button
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: secondaryColor,
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 17,
+                        horizontal: 20,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(2),
                       ),
                     ),
-                  ],
-                ),
+                    onPressed: () {},
+                    child: Text(
+                      textDownloadResume,
+                      style: AppStyles.styWhite20W500,
+                    ),
+                  ),
+                  const SizedBox(height: 71),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        SizedBox(
+        Container(
+          color: bgColor,
           height: 396,
           child: Column(
             children: [
