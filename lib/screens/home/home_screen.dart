@@ -14,26 +14,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      appBar: Responsive.isDesktop(context)
-          ? null
-          : AppBar(
-              backgroundColor: clrWhite,
-              elevation: 0,
-              toolbarHeight: 50,
-              actions: [
-                Builder(
-                  builder: (context) => Padding(
-                    padding: const EdgeInsets.only(right: 18.0),
-                    child: IconButton(
-                      icon: SvgPicture.asset(assetsIconMenu),
-                      onPressed: () {
-                        debugPrint('======> open drawer');
-                      },
-                    ),
-                  ),
-                ),
-              ],
-            ),
       body: Center(
         child: Container(
           color: clrWhite,
