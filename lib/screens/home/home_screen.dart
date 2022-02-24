@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../constants.dart';
-import '../responsive.dart';
+import '../../constants.dart';
+import '../../responsive.dart';
 import 'widgets/w_home_desktop.dart';
 import 'widgets/w_home_mobile.dart';
-import '../components/bouncing/bouncing_physics.dart';
+import '../../components/bouncing/bouncing_physics.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -42,12 +42,9 @@ class HomeScreen extends StatelessWidget {
             behavior: ScrollConfiguration.of(context).copyWith(
               scrollbars: false,
             ),
-            child: SingleChildScrollView(
-              physics: const CustomBouncingScrollPhysics(),
-              child: Responsive.isDesktop(context)
-                  ? const WHomeDesktop()
-                  : const WHomeMobile(),
-            ),
+            child: Responsive.isDesktop(context)
+                ? const WHomeDesktop()
+                : const WHomeMobile(),
           ),
         ),
       ),

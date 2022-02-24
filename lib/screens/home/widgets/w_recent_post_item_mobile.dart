@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-import '../../core/core.dart';
+import '../../../constants.dart';
+import '../../../core/core.dart';
 
-class WRecentPostItemDesktop extends StatelessWidget {
+class WRecentPostItemMobile extends StatelessWidget {
   final String title;
   final String topic;
 
-  const WRecentPostItemDesktop({
+  const WRecentPostItemMobile({
     Key? key,
     required this.title,
     required this.topic,
@@ -16,41 +16,41 @@ class WRecentPostItemDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 278,
-      width: 418,
+      height: 266,
+      width: 354,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
         color: clrWhite,
       ),
       child: Padding(
-        padding: const EdgeInsets.all(21),
+        padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 19),
         child: Column(
           children: [
             Text(
               title,
-              style: AppStyles.styRecentItemTitle,
+              style: AppStyles.styRecentItemTitleMobile,
             ),
-            const SizedBox(height: 17),
+            const SizedBox(height: 12),
             Row(
               children: [
                 Text(
                   Strings.date,
-                  style: AppStyles.styRecentItemDate,
+                  style: AppStyles.styAboutMe,
                 ),
-                const SizedBox(width: 26),
+                const SizedBox(width: 24),
                 Container(
                   width: 1,
                   height: 21,
                   decoration: const BoxDecoration(color: clrBlack),
                 ),
-                const SizedBox(width: 26),
+                const SizedBox(width: 24),
                 Text(
                   topic,
-                  style: AppStyles.styRecentItemDate,
+                  style: AppStyles.styAboutMe,
                 ),
               ],
             ),
-            const SizedBox(height: 11),
+            const SizedBox(height: 21),
             Text(
               Strings.postDescription,
               style: AppStyles.styAboutMe,

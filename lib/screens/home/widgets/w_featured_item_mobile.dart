@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../core/core.dart';
-import '../../constants.dart';
+import '../../../core/core.dart';
+import '../../../constants.dart';
 
 class WFeaturedItemMobile extends StatelessWidget {
   final String img;

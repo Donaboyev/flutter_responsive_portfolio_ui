@@ -1,32 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-import 'screens/home_screen.dart';
-import 'constants.dart';
 import 'core/strings.dart';
+import 'route/app_router.gr.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  runApp(MyApp(appRouter: AppRouter()));
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final AppRouter appRouter;
+
+  const MyApp({Key? key, required this.appRouter}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: Strings.appTitle,
-      theme: ThemeData.light().copyWith(
-        primaryColor: primaryColor,
-        scaffoldBackgroundColor: bgColor,
-        canvasColor: bgColor,
-        textTheme: GoogleFonts.heeboTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: Colors.black)
-            .copyWith(
-              bodyText1: const TextStyle(color: bodyTextColor),
-              bodyText2: const TextStyle(color: bodyTextColor),
-            ),
-      ),
-      home: const HomeScreen(),
+      routerDelegate: appRouter.delegate(),
+      routeInformationParser: appRouter.defaultRouteParser(),
     );
   }
 }
