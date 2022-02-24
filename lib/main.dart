@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'core/strings.dart';
 import 'route/app_router.gr.dart';
+import 'bloc/tab_notifier.dart';
 
 void main() {
   runApp(MyApp(appRouter: AppRouter()));
@@ -14,11 +16,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      title: Strings.appTitle,
-      routerDelegate: appRouter.delegate(),
-      routeInformationParser: appRouter.defaultRouteParser(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<TabNotifier>(create: (_) => TabNotifier()),
+      ],
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        title: Strings.appTitle,
+        routerDelegate: appRouter.delegate(),
+        routeInformationParser: appRouter.defaultRouteParser(),
+      ),
     );
   }
 }

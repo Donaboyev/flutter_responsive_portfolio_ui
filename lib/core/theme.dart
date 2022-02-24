@@ -8,7 +8,15 @@ class AppStyles {
     textStyle: const TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.w500,
-      color: Colors.black,
+      color: clrBlack,
+    ),
+  );
+
+  static TextStyle styRed20W500 = GoogleFonts.heebo(
+    textStyle: const TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w500,
+      color: secondaryColor,
     ),
   );
 

@@ -16,33 +16,6 @@ class WHomeDesktop extends StatelessWidget {
     return CustomScrollView(
       physics: const CustomBouncingScrollPhysics(),
       slivers: [
-        SliverAppBar(
-          elevation: 1,
-          backgroundColor: clrWhite,
-          floating: true,
-          leadingWidth: 191,
-          leading: CustomTextButton(
-            text: Strings.home,
-            onPressed: () {},
-          ),
-          actions: [
-            CustomTextButton(
-              text: Strings.works,
-              onPressed: () {},
-            ),
-            const SizedBox(width: 33),
-            CustomTextButton(
-              text: Strings.blog,
-              onPressed: () {},
-            ),
-            const SizedBox(width: 33),
-            CustomTextButton(
-              text: Strings.contact,
-              onPressed: () {},
-            ),
-            const SizedBox(width: 60),
-          ],
-        ),
         SliverList(
           delegate: SliverChildListDelegate(
             [
