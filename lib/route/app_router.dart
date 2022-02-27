@@ -9,6 +9,21 @@ import '../screens/screens.dart';
       initial: true,
       page: MainScreen,
       path: '/',
+      children: [
+        AutoRoute(path: '', page: HomeScreen),
+        AutoRoute(
+          page: WorksScreen,
+          path: 'works',
+        ),
+        AutoRoute(
+          page: BlogScreen,
+          path: 'blog',
+        ),
+        AutoRoute(
+          page: ContactScreen,
+          path: 'contact',
+        ),
+      ],
     ),
   ],
 )

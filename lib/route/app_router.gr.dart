@@ -24,18 +24,75 @@ class AppRouter extends _i2.RootStackRouter {
     MainRoute.name: (routeData) {
       return _i2.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i1.MainScreen());
+    },
+    HomeRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.HomeScreen());
+    },
+    WorksRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.WorksScreen());
+    },
+    BlogRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.BlogScreen());
+    },
+    ContactRoute.name: (routeData) {
+      return _i2.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i1.ContactScreen());
     }
   };
 
   @override
-  List<_i2.RouteConfig> get routes =>
-      [_i2.RouteConfig(MainRoute.name, path: '/')];
+  List<_i2.RouteConfig> get routes => [
+        _i2.RouteConfig(MainRoute.name, path: '/', children: [
+          _i2.RouteConfig(HomeRoute.name, path: '', parent: MainRoute.name),
+          _i2.RouteConfig(WorksRoute.name,
+              path: 'works', parent: MainRoute.name),
+          _i2.RouteConfig(BlogRoute.name, path: 'blog', parent: MainRoute.name),
+          _i2.RouteConfig(ContactRoute.name,
+              path: 'contact', parent: MainRoute.name)
+        ])
+      ];
 }
 
 /// generated route for
 /// [_i1.MainScreen]
 class MainRoute extends _i2.PageRouteInfo<void> {
-  const MainRoute() : super(MainRoute.name, path: '/');
+  const MainRoute({List<_i2.PageRouteInfo>? children})
+      : super(MainRoute.name, path: '/', initialChildren: children);
 
   static const String name = 'MainRoute';
+}
+
+/// generated route for
+/// [_i1.HomeScreen]
+class HomeRoute extends _i2.PageRouteInfo<void> {
+  const HomeRoute() : super(HomeRoute.name, path: '');
+
+  static const String name = 'HomeRoute';
+}
+
+/// generated route for
+/// [_i1.WorksScreen]
+class WorksRoute extends _i2.PageRouteInfo<void> {
+  const WorksRoute() : super(WorksRoute.name, path: 'works');
+
+  static const String name = 'WorksRoute';
+}
+
+/// generated route for
+/// [_i1.BlogScreen]
+class BlogRoute extends _i2.PageRouteInfo<void> {
+  const BlogRoute() : super(BlogRoute.name, path: 'blog');
+
+  static const String name = 'BlogRoute';
+}
+
+/// generated route for
+/// [_i1.ContactScreen]
+class ContactRoute extends _i2.PageRouteInfo<void> {
+  const ContactRoute() : super(ContactRoute.name, path: 'contact');
+
+  static const String name = 'ContactRoute';
 }

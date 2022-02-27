@@ -12,22 +12,20 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: bgColor,
-      body: Center(
-        child: Container(
-          color: clrWhite,
-          constraints: const BoxConstraints(maxWidth: 1152),
-          child: ScrollConfiguration(
-            behavior: ScrollConfiguration.of(context).copyWith(
-              scrollbars: false,
-            ),
-            child: Responsive.isDesktop(context)
-                ? const WHomeDesktop()
-                : const WHomeMobile(),
-          ),
-        ),
-      ),
+    return Center(
+      child: Text('Home screen'),
+      // child: Container(
+      //   color: clrWhite,
+      //   constraints: const BoxConstraints(maxWidth: 1152),
+      //   child: ScrollConfiguration(
+      //     behavior: ScrollConfiguration.of(context).copyWith(
+      //       scrollbars: false,
+      //     ),
+      //     child: Responsive.isDesktop(context)
+      //         ? const WHomeDesktop()
+      //         : const WHomeMobile(),
+      //   ),
+      // ),
     );
   }
 }
