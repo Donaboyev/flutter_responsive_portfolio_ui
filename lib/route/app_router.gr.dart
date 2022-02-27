@@ -26,20 +26,36 @@ class AppRouter extends _i2.RootStackRouter {
           routeData: routeData, child: const _i1.MainScreen());
     },
     HomeRoute.name: (routeData) {
-      return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.HomeScreen());
+      return _i2.CustomPage<dynamic>(
+          routeData: routeData,
+          child: const _i1.HomeScreen(),
+          transitionsBuilder: _i2.TransitionsBuilders.slideLeft,
+          opaque: true,
+          barrierDismissible: false);
     },
     WorksRoute.name: (routeData) {
-      return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.WorksScreen());
+      return _i2.CustomPage<dynamic>(
+          routeData: routeData,
+          child: const _i1.WorksScreen(),
+          transitionsBuilder: _i2.TransitionsBuilders.slideLeft,
+          opaque: true,
+          barrierDismissible: false);
     },
     BlogRoute.name: (routeData) {
-      return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.BlogScreen());
+      return _i2.CustomPage<dynamic>(
+          routeData: routeData,
+          child: const _i1.BlogScreen(),
+          transitionsBuilder: _i2.TransitionsBuilders.slideLeft,
+          opaque: true,
+          barrierDismissible: false);
     },
     ContactRoute.name: (routeData) {
-      return _i2.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.ContactScreen());
+      return _i2.CustomPage<dynamic>(
+          routeData: routeData,
+          child: const _i1.ContactScreen(),
+          transitionsBuilder: _i2.TransitionsBuilders.slideLeft,
+          opaque: true,
+          barrierDismissible: false);
     }
   };
 

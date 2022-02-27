@@ -10,18 +10,25 @@ import '../screens/screens.dart';
       page: MainScreen,
       path: '/',
       children: [
-        AutoRoute(path: '', page: HomeScreen),
-        AutoRoute(
+        CustomRoute(
+          path: '',
+          page: HomeScreen,
+          transitionsBuilder: TransitionsBuilders.slideLeft,
+        ),
+        CustomRoute(
           page: WorksScreen,
           path: 'works',
+          transitionsBuilder: TransitionsBuilders.slideLeft,
         ),
-        AutoRoute(
+        CustomRoute(
           page: BlogScreen,
           path: 'blog',
+          transitionsBuilder: TransitionsBuilders.slideLeft,
         ),
-        AutoRoute(
+        CustomRoute(
           page: ContactScreen,
           path: 'contact',
+          transitionsBuilder: TransitionsBuilders.slideLeft,
         ),
       ],
     ),
